@@ -10,12 +10,18 @@ public class BusTest {
 
     @Before
     public void before() {
-        bus = new Bus("CodeClan", 50);
+        bus = new Bus("CodeClan", 5);
         person = new Person();
     }
 
     @Test
     public void getNumberOfPassengersIsEmpty() {
         assertEquals(0, bus.numberOfPassengers());
+    }
+
+    @Test
+    public void addPassengerWhenNotFull() {
+        bus.addPassenger(person);
+        assertEquals(1, bus.numberOfPassengers());
     }
 }

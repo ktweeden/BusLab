@@ -15,4 +15,10 @@ public class Bus {
     public int numberOfPassengers() {
         return this.passengers.size();
     }
+
+    public void addPassenger(Person person) {
+        if (numberOfPassengers() < this.capacity) {
+            this.passengers.add(person);
+        }
+    }
 }
